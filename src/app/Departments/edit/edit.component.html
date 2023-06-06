@@ -1,0 +1,24 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar Department</h3>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="">Descripción</label>
+                    <input [(ngModel)]="department.description" name="description" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input [(ngModel)]="department.name" name="name" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Teléfono</label>
+                    <input [(ngModel)]="department.phone" name="phone" type="text" class="form-control">
+                </div>
+                <button (click)="Actualizar(department)" class="btn btn-danger">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
