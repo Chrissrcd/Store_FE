@@ -7,7 +7,7 @@ import Employee from '../Models/Employees';
 })
 export class EmployeesService {
 
-  private apiUrl = 'http://localhost:8080/marathon_store'; // Ruta del proyecto backend en Java
+  private apiUrl = 'http://localhost:8080/marathon_be'; // Ruta del proyecto backend en Java
 
   constructor(private http: HttpClient) { }
 

@@ -11,7 +11,7 @@ export class EnterprisesService {
  constructor(private http:HttpClient) { }
   
  //ruta del backend
- Url='http://localhost:8080/marathon_store';//ruta del proyecto backend en Java
+ Url='http://127.0.0.1:8080/marathon_be/enterprises';//ruta del proyecto backend en Java
  
  // metodo para obtener datos de las empresas del backend
  getEnterprises(){
