@@ -23,7 +23,7 @@ export class ListarDepartmentsComponent implements OnInit {
 
   Editar(department: Department): void {
     localStorage.setItem('id', department.id.toString());
-    this.router.navigate(['/departments/edit', department.id]);
+    this.router.navigate(['/departments/edit']);
   }
 
   Delete(department: Department): void {

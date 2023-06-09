@@ -18,17 +18,17 @@ const routes: Routes = [
   // Rutas para los componentes de Enterprises
   { path: 'enterprises', component: ListarEnterprisesComponent },
   { path: 'enterprises/add', component: AddEnterprisesComponent },
-  { path: 'enterprises/edit/:id', component: EditEnterprisesComponent },
+  { path: 'enterprises/edit', component: EditEnterprisesComponent },
 
     // Rutas para los componentes de Departments
     { path: 'departments', component: ListarDepartmentsComponent },
     { path: 'departments/add', component: AddDepartmentsComponent },
-    { path: 'departments/edit/:id', component: EditDepartmentsComponent },
+    { path: 'departments/edit', component: EditDepartmentsComponent },
   
     // Rutas para los componentes de Employees
     { path: 'employees', component: ListarEmployeesComponent },
     { path: 'employees/add', component: AddEmployeesComponent },
-    { path: 'employees/edit/:id', component: EditEmployeesComponent },
+    { path: 'employees/edit', component: EditEmployeesComponent },
 
 ];
 

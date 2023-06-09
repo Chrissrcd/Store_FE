@@ -21,7 +21,7 @@ export class ListarEmployeesComponent implements OnInit {
 
   Editar(employee: Employee): void {
     localStorage.setItem('id', employee.id.toString());
-    this.router.navigate(['/employees/edit', employee.id]);
+    this.router.navigate(['/employees/edit']);
   }
 
   Delete(employee: Employee): void {
