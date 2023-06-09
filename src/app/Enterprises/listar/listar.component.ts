@@ -21,7 +21,7 @@ export class ListarEnterprisesComponent implements OnInit {
   }
   Editar(enterprise: Enterprise): void {
     localStorage.setItem('id', enterprise.id.toString());
-    this.router.navigate(['edit']);
+    this.router.navigate(['/enterprises/edit', enterprise.id]);
   }
 
   Delete(enterprise: Enterprise): void {
