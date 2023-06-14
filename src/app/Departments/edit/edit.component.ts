@@ -28,10 +28,13 @@ export class EditDepartmentsComponent implements OnInit {
   }
 
   Actualizar(department: Department): void {
+    this.department.modifiedBy = 'Admin';
+    this.department.modifiedDate = new Date();
+    
     this.service.updateDepartment(department).subscribe(data => {
       this.department = data;
       alert('¡Actualizado exitosamente!');
-      this.router.navigate(['listar']);
+      this.router.navigate(['departments']);
     });
   }
 }

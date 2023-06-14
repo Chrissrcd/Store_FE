@@ -22,10 +22,10 @@
                 <tbody>
                     <tr *ngFor="let enterprise of enterprises" class="text-center">
                         <td>{{enterprise.id}}</td>
-                        <td>{{enterprise.created_by}}</td>
-                        <td>{{enterprise.create_date}}</td>
-                        <td>{{enterprise.modified_by}}</td>
-                        <td>{{enterprise.modified_date}}</td>
+                        <td>{{enterprise.createdBy}}</td>
+                        <td>{{enterprise.createDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td>{{enterprise.modifiedBy}}</td>
+                        <td>{{enterprise.modifiedDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
                         <td>{{enterprise.status}}</td>
                         <td>{{enterprise.name}}</td>
                         <td>{{enterprise.address}}</td>

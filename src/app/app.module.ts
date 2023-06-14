@@ -43,7 +43,7 @@ import { EmployeesService } from '../app/Service/employees.service';
   providers: [
     EnterprisesService,
     DepartmentsService,
-    EmployeesService
+    EmployeesService,
   ],
   bootstrap: [AppComponent]
 })

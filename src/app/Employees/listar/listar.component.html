@@ -24,10 +24,10 @@
                 <tbody>
                     <tr *ngFor="let employee of employees" class="text-center">
                         <td>{{ employee.id }}</td>
-                        <td>{{ employee.created_by }}</td>
-                        <td>{{ employee.create_date }}</td>
-                        <td>{{ employee.modified_by }}</td>
-                        <td>{{ employee.modified_date }}</td>
+                        <td>{{ employee.createdBy }}</td>
+                        <td>{{ employee.createDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td>{{ employee.modifiedBy }}</td>
+                        <td>{{ employee.modifiedDate | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
                         <td>{{ employee.status }}</td>
                         <td>{{ employee.age }}</td>
                         <td>{{ employee.email }}</td>

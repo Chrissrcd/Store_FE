@@ -28,10 +28,13 @@ export class EditEmployeesComponent implements OnInit {
   }
 
   Actualizar(employee: Employee): void {
+    this.employee.modifiedBy = 'Admin';
+    this.employee.modifiedDate = new Date();
+    
     this.service.updateEmployee(employee).subscribe(data => {
       this.employee = data;
       alert('¡Actualizado exitosamente!');
-      this.router.navigate(['listar']);
+      this.router.navigate(['employees']);
     });
   }
 }

@@ -17,20 +17,22 @@
                         <th>Description</th>
                         <th>Name</th>
                         <th>Phone</th>
+                        <th>Id Enterprise</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let department of departments" class="text-center">
                         <td>{{ department.id }}</td>
-                        <td>{{ department.created_by }}</td>
-                        <td>{{ department.create_date }}</td>
-                        <td>{{ department.modified_by }}</td>
-                        <td>{{ department.modified_date }}</td>
+                        <td>{{ department.createdBy }}</td>
+                        <td>{{ department.createDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td>{{ department.modifiedBy }}</td>
+                        <td>{{ department.modifiedDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
                         <td>{{ department.status }}</td>
                         <td>{{ department.description }}</td>
                         <td>{{ department.name }}</td>
                         <td>{{ department.phone }}</td>
+                        <td>{{ department.enterpriseId }}</td>
                         <td>
                             <button (click)="Editar(department)" class="btn btn-warning">Edit</button>
                             <button (click)="Delete(department)" class="btn btn-danger">Delete</button>

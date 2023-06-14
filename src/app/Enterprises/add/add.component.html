@@ -7,15 +7,15 @@
             <form action="">
                 <div class="form-group">
                     <label for="">Nombre</label>
-                    <input [(ngModel)]="enterprises.name" name="name" type="text" class="form-control">
+                    <input [(ngModel)]="enterprise.name" name="name" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="">Dirección</label>
-                    <input [(ngModel)]="enterprises.address" name="address" type="text" class="form-control">
+                    <input [(ngModel)]="enterprise.address" name="address" type="text" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="">Teléfono</label>
-                    <input [(ngModel)]="enterprises.phone" name="phone" type="text" class="form-control">
+                    <input [(ngModel)]="enterprise.phone" name="phone" type="text" class="form-control">
                 </div>
                 <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
             </form>

@@ -1,10 +1,10 @@
 export class Employee {
     id: number = 0;
-    created_by: string = '';
-    create_date: Date = new Date();
-    modified_by: string = '';
-    modified_date: Date = new Date();
-    status: boolean = false;
+    createdBy: string = '';
+    createDate: Date = new Date();
+    modifiedBy: string = '';
+    modifiedDate: Date = new Date();
+    status: boolean = true;
     age: number = 0;
     email: string = '';
     name: string = '';

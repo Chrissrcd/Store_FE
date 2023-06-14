@@ -10,16 +10,24 @@ import Enterprise from 'src/app/Models/Enterprises';
 })
 export class AddEnterprisesComponent {
 
-  enterprises:Enterprise = new Enterprise(); 
-  constructor( private router:Router, private service:EnterprisesService) { }
+  enterprise:Enterprise = new Enterprise(); 
+  constructor( 
+    private router:Router, 
+    private service:EnterprisesService,
+  ) { }
 
   ngOnInit(): void {
   }
+
   Guardar(){
-    this.service.createEnterprise(this.enterprises)
+    this.enterprise.createdBy = 'Admin'; // Asignar el valor de createdBy
+    this.enterprise.createDate = new Date(); // Asignar la fecha actual
+    this.enterprise.modifiedBy = 'Admin';
+    this.enterprise.modifiedDate = new Date();
+    this.service.createEnterprise(this.enterprise)
     .subscribe(data=>{
       alert("se agrego con exito");
-      this.router.navigate(["listar"]);
+      this.router.navigate(["enterprises"]);
     })
   }
 }

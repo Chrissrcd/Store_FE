@@ -10,7 +10,7 @@ import Enterprise from 'src/app/Models/Enterprises';
 })
 export class EditEnterprisesComponent {
 
-  enterprises:Enterprise = new Enterprise(); 
+  enterprise:Enterprise = new Enterprise(); 
   constructor( private router:Router, private service:EnterprisesService) { }
 
   ngOnInit(): void {
@@ -20,15 +20,18 @@ export class EditEnterprisesComponent {
     let id = localStorage.getItem("id");
     if (id !== null) {
       this.service.getEnterpriseId(+id).subscribe(data => {
-        this.enterprises = data;
+        this.enterprise = data;
       });
     }
   }
   Actualizar(enterprise: Enterprise): void {
+    this.enterprise.modifiedBy = 'Admin';
+    this.enterprise.modifiedDate = new Date();
+
     this.service.updateEnterprise(enterprise).subscribe(data => {
-      this.enterprises = data;
+      this.enterprise = data;
       alert('¡Actualizado exitosamente!');
-      this.router.navigate(['listar']);
+      this.router.navigate(['enterprises']);
     });
   }
 }
